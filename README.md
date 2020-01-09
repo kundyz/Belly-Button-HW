@@ -1,1 +1,2 @@
-# Belly-Button-HW
+# Belly Button Biodiversity
+![logo](/images/logo.jpg)
