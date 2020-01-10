@@ -7,5 +7,6 @@ Task
   * Use otu_ids as the labels for the pie chart.
   * Use otu_labels as the hovertext for the chart.
 * Create a Bubble Chart that uses data from your samples route (/samples/<sample>) to display each sample.
+  * Use otu_ids for the x values.
 
 
