@@ -15,5 +15,6 @@ Task
 * Display the sample metadata from the route /metadata/<sample>.
   * Display each key/value pair from the metadata JSON object somewhere on the page.
 * Update all of the plots any time that a new sample is selected.
+* You are welcome to create any layout that you would like for your dashboard. An example dashboard page might look something like the following.
 
 
