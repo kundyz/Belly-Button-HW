@@ -14,5 +14,6 @@ Task
   * Use otu_labels for the text values.
 * Display the sample metadata from the route /metadata/<sample>.
   * Display each key/value pair from the metadata JSON object somewhere on the page.
+* Update all of the plots any time that a new sample is selected.
 
 
