@@ -1,5 +1,4 @@
 function buildMetadata(sample) {
-
   // Complete the following function that builds the metadata panel.
   // Use `d3.json` to fetch the metadata for a sample.
   var metaData = "/metadata/" + sample;
@@ -16,17 +15,16 @@ function buildMetadata(sample) {
       .text(`${key}: ${value}`);
     });
   });
-  // BONUS: Build the Gauge Chart
-  // buildGauge(data.WFREQ);
+  // BONUS: Build the Gauge Chart.
+  buildGauge(data.WFREQ);
 }
 console.log()
 
 function buildCharts(sample) {
-
-  // @TODO: Use `d3.json` to fetch the sample data for the plots
+  // Use `d3.json` to fetch the sample data for the plots.
   var sampleData = "/samples/" + sample;
   d3.json(sampleData).then(function(data) {
-    // @TODO: Build a Bubble Chart using the sample data
+    // Build a Bubble Chart using the sample data.
     var bubbleChart = {
       x: data.otu_ids,
       y: data.sample_values,
@@ -45,10 +43,8 @@ function buildCharts(sample) {
       showlegend: false
     };
     Plotly.newPlot('bubble', bubbleChart, layout);
-    
-    // @TODO: Build a Pie Chart
-    // HINT: You will need to use slice() to grab the top 10 sample_values,
-    // otu_ids, and labels (10 each).
+    // Build a Pie Chart.
+    // HINT: You will need to use slice() to grab the top 10 sample_values, otu_ids, and labels (10 each).
     var pieChart = [{
       values: data.sample_values.slice(0, 10),
       labels: data.otu_ids.slice(0, 10),
@@ -58,7 +54,7 @@ function buildCharts(sample) {
     var layout = {
       showlegend: true,
     };
-    Plotly.newPlot('pie', pieChart, layout);  
+    Plotly.newPlot('pie', pieChart, layout);
   })
 }
 
