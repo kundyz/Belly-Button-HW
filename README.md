@@ -27,5 +27,5 @@ Task
 
 Output
 
-![logo](/belly_button_biodiversity/images/Dashboard.PNG)
+![logo](/images/Dashboard.png)
 ![logo](/images/BubbleChart.PNG)
