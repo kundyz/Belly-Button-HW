@@ -14,9 +14,9 @@ function buildMetadata(sample) {
       .append("h6")
       .text(`${key}: ${value}`);
     });
+    buildGauge(data.WFREQ);
   });
   // BONUS: Build the Gauge Chart.
-  buildGauge(data.WFREQ);
 }
 console.log()
 
@@ -59,10 +59,9 @@ function buildCharts(sample) {
 }
 
 function init() {
-  // Grab a reference to the dropdown select element
+  // Grab a reference to the dropdown select element.
   var selector = d3.select("#selDataset");
-
-  // Use the list of sample names to populate the select options
+  // Use the list of sample names to populate the select options.
   d3.json("/names").then((sampleNames) => {
     sampleNames.forEach((sample) => {
       selector
@@ -70,8 +69,7 @@ function init() {
         .text(sample)
         .property("value", sample);
     });
-
-    // Use the first sample from the list to build the initial plots
+    // Use the first sample from the list to build the initial plots.
     const firstSample = sampleNames[0];
     buildCharts(firstSample);
     buildMetadata(firstSample);
@@ -79,10 +77,10 @@ function init() {
 }
 
 function optionChanged(newSample) {
-  // Fetch new data each time a new sample is selected
+  // Fetch new data each time a new sample is selected.
   buildCharts(newSample);
   buildMetadata(newSample);
 }
 
-// Initialize the dashboard
+// Initialize the dashboard.
 init();
