@@ -28,4 +28,4 @@ Task
 Output
 
 ![logo](/images/Dashboard.png)
-![logo](/images/BubbleChart.PNG)
+![logo](/images/BubbleChart.png)
